@@ -1,0 +1,50 @@
+/* Calendar Styling */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.day {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.day.today {
+  background-color: #3c8dbc;
+  color: white;
+}
+
+.day.completed {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Future Days Styling */
+.day.future {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #ccc; /* Muted text color */
+  border: 1px dashed #ccc; /* Dashed border to differentiate */
+  cursor: not-allowed; /* Indicate it's not interactive */
+  pointer-events: none; /* Disable clicking */
+}
+
+.day.future:hover {
+  background-color: #f0f0f0; /* Prevent hover effect */
+}
+
+/* Optional Hover Effect for Today's and Completed Days */
+.day.today:hover,
+.day.completed:hover {
+  background-color: #2e6da4; /* Darker shade for hover effect */
+}
+
+.day:hover {
+  background-color: #e6e6e6; /* Slight hover effect for active days */
+}
